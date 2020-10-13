@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFNotifier"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="650" Width="1000">
     <Grid>
+        <DataGrid x:Name="dataGridUsers" Margin="26,235,30,23" GridLinesVisibility="Horizontal" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="40" Binding="{Binding userId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="First Name" Width="120" Binding="{Binding firstName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Last Name" Width="120" Binding="{Binding lastName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Phone Number" Width="100" Binding="{Binding phoneNumber}"></DataGridTextColumn>
+                <!--<DataGridCheckBoxColumn Header="SMS" Width="40"  Binding="{Binding smsOptIn}"></DataGridCheckBoxColumn>-->
+                <DataGridTemplateColumn Header="SMS" Width="40">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding smsOptIn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Email" Width="200" Binding="{Binding email}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="txtboxNotificationBody" HorizontalAlignment="Left" Margin="26,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="944" Height="51"/>
+        <Label x:Name="lblNotificationBody" Content="Notification Body:" HorizontalAlignment="Left" Margin="26,29,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="newMovieRadBtn" Content="New Movie" HorizontalAlignment="Left" Margin="26,116,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="newTvShowRadBtn" Content="New TV Show" HorizontalAlignment="Left" Margin="26,136,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="maintenanceRadBtn" Content="Maintenance" HorizontalAlignment="Left" Margin="26,156,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="otherRadBtn" Content="Other" HorizontalAlignment="Left" Margin="26,176,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBoxOther" HorizontalAlignment="Left" Margin="91,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369"/>
+        <Button x:Name="btnSendNotification" Content="Send Notification" HorizontalAlignment="Left" Margin="747,165,0,0" VerticalAlignment="Top" Height="35" Width="102" Click="btnSendNotification_Click"/>
+        <Button x:Name="btnClearAll" Content="Clear All" HorizontalAlignment="Left" Margin="868,165,0,0" VerticalAlignment="Top" Height="35" Width="102" Click="btnClearAll_Click"/>
+        <Label x:Name="lblStatus" Content="Status:" HorizontalAlignment="Left" Margin="747,113,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblUsers" Content="Users :" HorizontalAlignment="Left" Margin="26,209,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
