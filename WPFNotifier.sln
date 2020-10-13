@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFNotifier", "WPFNotifier.csproj", "{7239034D-6660-4CFE-8F4F-B0E2FFB5EDC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7239034D-6660-4CFE-8F4F-B0E2FFB5EDC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7239034D-6660-4CFE-8F4F-B0E2FFB5EDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7239034D-6660-4CFE-8F4F-B0E2FFB5EDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7239034D-6660-4CFE-8F4F-B0E2FFB5EDC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFCEDA47-32D5-4700-BE2E-BAB8597B21E1}
+	EndGlobalSection
+EndGlobal
